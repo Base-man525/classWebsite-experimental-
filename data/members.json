@@ -1,0 +1,208 @@
+{
+    "updatedAt":  "2026-09-25T17:47:29.3390063Z",
+    "members":  [
+                    {
+                        "id":  "member-01",
+                        "name":  "班级成员 01",
+                        "major":  "专业待完善",
+                        "position":  "班长",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-02",
+                        "name":  "班级成员 02",
+                        "major":  "专业待完善",
+                        "position":  "团支书",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-03",
+                        "name":  "班级成员 03",
+                        "major":  "专业待完善",
+                        "position":  "学习委员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-04",
+                        "name":  "班级成员 04",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-05",
+                        "name":  "班级成员 05",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-06",
+                        "name":  "班级成员 06",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-07",
+                        "name":  "班级成员 07",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-08",
+                        "name":  "班级成员 08",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-09",
+                        "name":  "班级成员 09",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-10",
+                        "name":  "班级成员 10",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-11",
+                        "name":  "班级成员 11",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-12",
+                        "name":  "班级成员 12",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-13",
+                        "name":  "班级成员 13",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-14",
+                        "name":  "班级成员 14",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-15",
+                        "name":  "班级成员 15",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-16",
+                        "name":  "班级成员 16",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-17",
+                        "name":  "班级成员 17",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-18",
+                        "name":  "班级成员 18",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-19",
+                        "name":  "班级成员 19",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-20",
+                        "name":  "班级成员 20",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-21",
+                        "name":  "班级成员 21",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-22",
+                        "name":  "班级成员 22",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-23",
+                        "name":  "班级成员 23",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-24",
+                        "name":  "班级成员 24",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-25",
+                        "name":  "班级成员 25",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-26",
+                        "name":  "班级成员 26",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-27",
+                        "name":  "班级成员 27",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-28",
+                        "name":  "班级成员 28",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    },
+                    {
+                        "id":  "member-29",
+                        "name":  "班级成员 29",
+                        "major":  "专业待完善",
+                        "position":  "班级成员",
+                        "avatar":  ""
+                    }
+                ]
+}

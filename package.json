@@ -1,0 +1,13 @@
+{
+  "name": "class-website-experimental",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Class website scaffold with news, member directory, research placeholder, and WeChat Official Account API bridge.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

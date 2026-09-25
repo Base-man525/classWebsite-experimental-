@@ -1,0 +1,15 @@
+{
+  "siteName": "示例班级",
+  "siteSubtitle": "班级信息与成长记录",
+  "copyright": "© 2026 示例班级 版权所有",
+  "filing": "备案号：待备案",
+  "address": "地址：待完善",
+  "postalCode": "邮编：000000",
+  "phone": "电话：000-0000-0000",
+  "email": "邮箱：class@example.com",
+  "partners": [
+    "示例学院",
+    "示例实验室",
+    "班级微信公众号"
+  ]
+}
