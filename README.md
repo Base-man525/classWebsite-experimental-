@@ -121,3 +121,23 @@ Invoke-RestMethod -Method Put -Uri "http://localhost:3000/api/members/member-01"
 ```
 
 如果部署为纯静态站点，HTML/CSS 可以正常展示，但需要另外部署 `server.js` 中的 API，并配置同源反向代理；微信 AppSecret 不能放置在浏览器代码中。
+
+## 部署到 GitHub Pages
+
+仓库已内置 `.github/workflows/deploy-pages.yml`，推送到 `master` 分支后会自动发布静态站点。
+
+1. 打开 GitHub 仓库的 **Settings → Pages**。
+2. 在 **Build and deployment** 的 **Source** 中选择 **GitHub Actions**。
+3. 推送到 `master`，或在 **Actions** 中手动运行 **Deploy to GitHub Pages**。
+4. 工作流完成后，通过 `https://<用户名>.github.io/<仓库名>/` 访问站点。
+5. 如需自定义域名，可在 **Settings → Pages → Custom domain** 中设置。
+
+### 静态托管说明
+
+GitHub Pages 只提供静态文件，`server.js` 中的 API（微信公众号文章、成员资料写入等）不会运行。前端已支持自动回退：
+
+- 页面数据依次尝试 `/api/...`，失败后读取 `data/` 目录下的静态 JSON（`site.json`、`news.json`、`members.json`）。
+- 微信公众号文章无法在纯静态环境实时同步，将展示 `data/news.json` 中的示例新闻。
+- 需要实时 API 时，请单独部署 `server.js`（Node 服务器或 Serverless），再把前端 API 地址改为同源地址。
+
+更新成员资料或站点信息时，直接修改 `data/` 下的 JSON 并推送到 `master` 即可重新发布。

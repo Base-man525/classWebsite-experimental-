@@ -1,11 +1,23 @@
 'use strict';
 
+// API routes used by the bundled Node server.
 const API = {
-  site: '/api/site',
-  members: '/api/members',
-  news: '/api/news',
-  wechatNews: '/api/wechat/articles?limit=6'
+  site: 'api/site',
+  members: 'api/members',
+  news: 'api/news',
+  wechatNews: 'api/wechat/articles?limit=6'
 };
+
+// Static JSON fallbacks so the same front end also works on GitHub Pages.
+const STATIC_DATA = {
+  site: 'data/site.json',
+  members: 'data/members.json',
+  news: 'data/news.json'
+};
+
+function resolveUrl(pathname) {
+  return new URL(pathname, document.baseURI).toString();
+}
 
 const state = {
   members: []
@@ -24,7 +36,7 @@ function setText(selector, value) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url, {
+  const response = await fetch(resolveUrl(url), {
     headers: { Accept: 'application/json' }
   });
 
@@ -32,7 +44,20 @@ async function fetchJson(url) {
     throw new Error(`请求失败：${response.status}`);
   }
 
-  return response.json();
+  const text = await response.text();
+  return JSON.parse(text.replace(/^\uFEFF/, ''));
+}
+
+async function fetchFirstJson(paths) {
+  let lastError;
+  for (const pathname of paths) {
+    try {
+      return await fetchJson(pathname);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+  throw lastError || new Error('Unable to load data');
 }
 
 function formatDate(value) {
@@ -144,7 +169,7 @@ function bindNavigation() {
 
 async function loadSiteInfo() {
   try {
-    const site = await fetchJson(API.site);
+    const site = await fetchFirstJson([API.site, STATIC_DATA.site]);
     setText('[data-site-name]', site.siteName || '示例班级');
     setText('[data-site-subtitle]', site.siteSubtitle || '班级信息与成长记录');
 
@@ -264,13 +289,13 @@ async function loadNews() {
   source.textContent = '正在同步新闻…';
 
   try {
-    const payload = await fetchJson(API.wechatNews);
+    const payload = await fetchFirstJson([API.wechatNews, API.news, STATIC_DATA.news]);
     renderNews(payload);
   } catch (error) {
     console.error(error);
 
     try {
-      const fallback = await fetchJson(API.news);
+      const fallback = await fetchFirstJson([API.news, STATIC_DATA.news]);
       renderNews({
         ...fallback,
         source: 'sample-fallback',
@@ -391,7 +416,7 @@ async function loadMembers() {
   emptyMessage.hidden = true;
 
   try {
-    const payload = await fetchJson(API.members);
+    const payload = await fetchFirstJson([API.members, STATIC_DATA.members]);
     state.members = Array.isArray(payload.members) ? payload.members : [];
     renderMembers(state.members);
   } catch (error) {
